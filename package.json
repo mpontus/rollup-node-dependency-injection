@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "rollup": "^1.29.0",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-node-builtins": "^2.1.2"
   },
   "scripts": {

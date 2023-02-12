@@ -1,4 +1,5 @@
 import builtins from "rollup-plugin-node-builtins";
+import copy from "rollup-plugin-copy";
 import pkg from "./package.json";
 
 export default [
@@ -9,6 +10,11 @@ export default [
       { file: pkg.main, format: "cjs" },
       { file: pkg.module, format: "es" },
     ],
-    plugins: [builtins()],
+    plugins: [
+      builtins(),
+      copy({
+        targets: [{ src: "src/services.yaml", dest: "dist" }],
+      }),
+    ],
   },
 ];
