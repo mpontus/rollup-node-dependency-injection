@@ -1,7 +1,13 @@
-import { ContainerBuilder } from "node-dependency-injection";
+import * as path from "path";
+import {
+  ContainerBuilder,
+  Definition,
+  YamlFileLoader,
+} from "node-dependency-injection";
 import { Mailer } from "./Mailer";
 
 const container = new ContainerBuilder();
-container.register("mailer", Mailer, ["sendmail"]);
+const loader = new YamlFileLoader(container);
+loader.load(path.join(__dirname, "services.yaml"));
 
 export { container };
