@@ -1,16 +1,15 @@
 {
   "name": "rollup-starter-lib",
   "version": "1.0.0",
-  "main": "dist/how-long-till-lunch.cjs.js",
-  "module": "dist/how-long-till-lunch.esm.js",
-  "browser": "dist/how-long-till-lunch.umd.js",
+  "main": "dist/rollup-node-dependency-injection.cjs.js",
+  "module": "dist/rollup-node-dependency-injection.esm.js",
+  "browser": "dist/rollup-node-dependency-injection.umd.js",
   "dependencies": {
-    "ms": "^2.0.0"
+    "node-dependency-injection": "^2.7.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
-    "rollup": "^1.29.0"
+    "rollup": "^1.29.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
   },
   "scripts": {
     "build": "rollup -c",
